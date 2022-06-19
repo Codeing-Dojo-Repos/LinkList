@@ -33,12 +33,23 @@ class sll{
         return old_front
     }
 
-    getFront(){
+    front(){
         if (!this.head){
             return null
         }
-        
+
         return this.head.data
+    }
+
+    display(){
+        let currentNode = this.head
+        while (currentNode !== null){
+            console.log(currentNode.data)
+            if(currentNode.next !== null){
+                console.log(",")
+            }
+            currentNode = currentNode.next
+        }
     }
 
 }
